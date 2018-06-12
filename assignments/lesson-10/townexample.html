@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Town</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <div class="towndata">
+      <h3 id="franklintowndata"></h3>
+      <span id="motto"></span>
+      <h4>Town Events</h4>
+      <ul id="franklinevents">
+              
+      </ul>
+    </div>
+      
+    <script>  
+      
+      
+      
+      var requestURL = 'https://byui-cit230.github.io/towndata.json';
+      var request = new XMLHttpRequest();      
+      request.open('GET', requestURL);
+      request.responseType = 'json';
+      request.send();
+
+      request.onload = function() {
+        var towndata = request.response;
+        showTown(towndata);
+      }
+      
+      function showTown(towndata) {
+        var towns = towndata['towns'];
+        document.getElementById('franklintowndata').innerHTML = towns[0].name;
+        document.getElementById("motto").innerHTML = "<strong>Town Motto:</strong> " + towns[0].motto;    
+        
+        var eventlist = document.querySelector('#franklinevents');
+        var townEvents = towns[0].events;
+        for (var j = 0; j < townEvents.length; j++) {
+          var listItem = document.createElement('li');
+          listItem.textContent = townEvents[j];  
+          eventlist.appendChild(listItem);
+        }     
+      }      
+    </script>
+  </body>
+</html>
