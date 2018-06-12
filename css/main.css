@@ -11,11 +11,11 @@ body {
 
 h1 {
     font-size: 2.1rem;
+    text-shadow: 2px 2px 3px #eee;
 }
 
 h2 {
     font-size: 1.5rem;
-    text-align: center;
 }
 
 header, main, footer {
@@ -27,20 +27,7 @@ header, main, footer {
 header nav {
     background-color: navajowhite;
 }
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-header nav ul li {
-    display: inline-block;
-}
-header nav ul li a {
-    color: navy;
-    display: block;
-    padding: .25rem;
-    text-decoration: none;
-    font-weight: 700;
-}
+
 
 header, footer, footer a {
     text-align: center;
@@ -52,11 +39,11 @@ header img {
     width: 250px;
     height: auto;
     float: right;
-    box-shadow: 3px 3px 3px #444;
+    box-shadow: 3px 3px 3px #777;
 }
 
 footer {
-    font-size: smaller;
+    font-size: 1rem;
 }
 
 .active {
