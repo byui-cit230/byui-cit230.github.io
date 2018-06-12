@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 * { margin: 0; box-sizing: border-box; } 
 
 body { 
@@ -58,5 +60,5 @@ footer {
 }
 
 .active {
-
+    color: yellow;
 }
