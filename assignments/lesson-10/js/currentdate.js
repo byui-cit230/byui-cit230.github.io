@@ -8,5 +8,5 @@ window.onload = function () {
     let dd = d.getDate();
     let day = d.getDay();
     
-    document.getElementById("currentdate").innerHTML = weekday[day] + ", " + dd + " " + months[mm] + " " + yyyy;
+    document.getElementById("currentdate").innerHTML = weekday[day] + ", " + dd + " " + month[m] + " " + y;
 }
