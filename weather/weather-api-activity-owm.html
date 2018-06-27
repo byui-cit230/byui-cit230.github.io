@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+	<title>BYU-Idaho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/course.css" />
+</head>
+<body>
+<div id="main">
+<div id="header"><img src="images/smallBanner.jpg" alt="Course Banner" /></div>
+<div id="article">
+<h1>Weather API Activity - OpenWeatherMap.org</h1>
+<hr />
+<h2>Introduction</h2>
+<p>The purpose of this activity is to introduce you to a weather API that we can consume and apply to our weather site project. This activity is required in order to complete the lesson enhancement assignment where we use live, weather data versus placeholder content on the Franklin town page.</p>
+<p>The activity introduces you to the JavaScript XMLHTTPRequest object which we will use along with the site API specifications to retrieve data in JSON format. Be sure to complete the Assigned Readings before attempting this activity. We will sign up for a free API key through the site, look at JSON formatted results and then how to consume those results in test application.</p>
+<h2>Instructions</h2>
+<p>&bull; Navigate to <a href="https://openweathermap.org" target="_blank" rel="noopener">https://openweathermap.org</a>&nbsp;and enter your city name in the input box provided and click Search. Click on the appropriate search result for your city/town. Note that some weather data is provided in those results. You may want to switch to C or F results using the buttons in the upper right corner of the site.</p>
+<p><img src="images/romeexampletemp.png" alt="Example Output From OpenWeatherMap" title="Example Output From OpenWeatherMap" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></p>
+<p>&bull; A city template page loads with the current weather information loaded. The results have been formatted to fit into this <em><strong>view</strong> </em>page. We will be using results like these and place them into our own town page(s). The raw format of the data will be requested in JSON format from which we can extract the named properties that we want to use on our page(s).</p>
+<p>&bull; In order to consume this information on our own site, we will need to use the Weather API that the site provides. Click on the<strong> API</strong> link in the main menu at the top of the page or navigate to&nbsp;<a href="https://openweathermap.org/api" target="_blank">https://openweathermap.org/api</a>. Find the Current weather data section and click on the<strong> API doc</strong> button.</p>
+<p><img src="images/apidoc.png" alt="OpenWeatherMap API Documentation Link Example" title="OpenWeatherMap API Documentation Link Example" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></p>
+<p>&bull; The Current Weather Data page talks about how to call the current weather data for one location. We want to look at a sample response (output) by using the BY CITY ID method provided by the service. Scroll down to the By City ID and click on the Examples of API calls link provided.</p>
+<p><img src="images/bycityid.png" alt="By City ID URL location example" title="By City ID URL location example" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></p>
+<p style="padding-left: 30px;">When you click on that link, an API key is added for you in the URL and the results are in returned in a minimized JSON format. Look at the results and try to pick out some <strong>name-value</strong> pairs,<em> e.g.,&nbsp; "description":"scattered clouds",&nbsp;</em>and try to make sense of the output. Some of the results may seem odd but remember that there are different units available to measure temperature such as Kelvin.&nbsp;</p>
+<p class="callout">Type <em><strong>Kelvin to Fahrenheit</strong></em> as a Google Search to get the Google quick Unit Converter UI to complete a quick conversion test.</p>
+<p>&bull; Close that browser tab and click back on the site to get to the Subscribe option OR go to <a href="https://openweathermap.org/price" target="_blank" rel="noopener">https://openweathermap.org/price</a>. We will be using the<strong> Free account</strong> which allows no more than 60 calls to the service per minute. You want to be careful as you are testing your work to NOT preform excessive calls. Note that this service is provided under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0)</a> and that the data is open and licensed by Open Data Commons Open Database License (ODbL). WE NEED TO CREDIT OPENWEATHERMAP AS A WEATHER DATA SOURCE IN A VISIBLE PART OF OUR SITE. This will be a requirement of the assignment.</p>
+<p>&bull; Click on the <strong>Get API key and Start</strong> button on the Free account column.</p>
+<p><img src="images/openweathermapfreeaccountbutton.png" alt="Free Account Button Location Image" title="Free Account Button Location Image" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></p>
+<p>&bull; Bookmark the <strong>"How to Start"</strong> page that loads to keep as a reference. Click on the <strong>Sign Up</strong> button provided and proceed through the guided directions to get an API key (APPID) which you will need to store and keep secure for your use only.&nbsp;</p>
+<p class="callout">Make sure to record your API key (APPID) as this unique key is required in the URL as a querystring to get/call the service.</p>
+<p></p>
+<p>&bull; Return to the bookmarked #use page&nbsp;<a href="https://openweathermap.org/appid#use" target="_blank">(https://openweathermap.org/appid#use)</a>&nbsp;and <strong>read</strong> the sections about how to use API key in API call and getting accurate API responses along with access limitation warnings.</p>
+<p>&bull; In this activity and on the assignment, we will be using a Franklin town in the US with the CITY ID of 4156210. This number is needed in the API call URL.</p>
+<p class="callout">For fun, you may want to look up your city/town or nearest location by using the Cities' IDs zipped (.gz format) list provided.</p>
+<p>&bull; Now, with your unique APPID and the CITYID we can test a simple call to the OpenWeatherMap API service. We will build a simple HTML document that references JavaScript that uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest()</a> object to open up the service URL with openweathermap.org.&nbsp;</p>
+<p class="callout">"Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in Ajax programming.&nbsp;Despite its name, XMLHttpRequest can be used to retrieve any type of data, not just XML, and it supports protocols other than HTTP (including file and ftp)." - MDN web docs</p>
+<p>&bull; You will need to bookmark the following page to reference all of the&nbsp;<strong>Weather</strong> parameters that are available to use in the API JSON response. For example, to get the current weather description, use <strong>weather.description</strong>&nbsp;</p>
+<p style="padding-left: 30px;"><a href="https://openweathermap.org/current#current_JSON" target="_blank">https://openweathermap.org/current#current_JSON</a></p>
+<h2>Activity Requirements</h2>
+<ol>
+<li>In your <em><strong>assignments/lesson-9</strong></em> folder location, build a simple, valid HTML page named <em><strong>api-test.html</strong></em> with a title and body contents of only a heading and single block element containing a span tag for the current temperature. Create a <em><strong>weatherapi.js</strong></em> file in your scripts folder and source reference that file before the &lt;body&gt; closing tag.<br /><br />example body content:<br /><span style="font-family: 'courier new', courier, sans-serif;">&lt;body&gt;</span><br /><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; &lt;h1&gt;OpenWeatherMap.org API Test&lt;/h1&gt;</span><br /><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; &lt;p&gt;The current temperature in Franklin is &lt;span id="current-temp"&gt;&lt;/span&gt;&amp;deg; F&lt;/p&gt;<br />&nbsp; &lt;script src="js/weatherapi.js"&gt;&lt;/script&gt;<br /></span><span style="font-family: 'courier new', courier, sans-serif;">&lt;/body&gt;</span><br /><br /></li>
+<li>In your weatherapi.js file, create a new instance of the XMLHttpRequest object and assign it to variable named <strong><em>weatherRequest</em></strong>. <em>Hint: <span style="font-family: 'courier new', courier, sans-serif;"><strong>let weatherRequest = new XMLHttpRequest();</strong></span></em></li>
+<li>weatherapi.js: Create an <strong><em>apiURL</em> </strong>string variable that stores the OpenWeatherMap.org API call URL as demonstrated in the documentation - <a href="https://openweathermap.org/appid" target="_blank" rel="noopener">https://openweathermap.org/appid</a>. Use weather versus forecast data and make sure to use the https:// protocol and the Franklin City ID given above and your own APPID. In order to get Fahrenheit results, set the units option to imperial.</li>
+<li><!--StartFragment-->weatherapi.js: <!--EndFragment--> Call the open method of the weatherRequest XMLHttpRequest object using the Get method, your <strong><em>apiURL</em> </strong>string, and set the optional async parameter to true.</li>
+<li><!--StartFragment-->weatherapi.js: <!--EndFragment--> Next, send the request using <strong><span style="font-family: 'courier new', courier, sans-serif;">weatherRequest.send();</span></strong></li>
+<li><span style="font-family: verdana, sans-serif;"><span style="font-family: verdana, sans-serif;"> <!--StartFragment-->weatherapi.js: <!--EndFragment--> To wait for the request object to load, use the onload method to to encase the JSON parser and output statements in a generic function OR use an addEventListener using the load parameter.&nbsp;<br /><br />Hint: onload function and parsing the XMLHttpRequest JSON response.<br /><br /><span style="font-family: 'courier new', courier, sans-serif;">weatherRequest.onload =&nbsp; function () {</span><br /><!--StartFragment--></span></span>
+<div><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; let weatherData = JSON.parse(weatherRequest.responseText);<br /><br /></span></div>
+<span style="font-family: verdana, sans-serif;"><br /></span></li>
+<li><span style="font-family: verdana, sans-serif;"> <!--StartFragment-->weatherapi.js: <!--EndFragment--> Write the entire parsed JSON output to the console for review and testing using console.log(weatherData);&nbsp; Make sure all output/write statements are within the onload function () { ... }.</span></li>
+<li><span style="font-family: verdana, sans-serif;"> <!--StartFragment-->weatherapi.js: <!--EndFragment--> Write the current temperature to the innerHTML of the current-temp span tag in the HTML body.</span></li>
+<li><span style="font-family: verdana, sans-serif;">Styling the page is optional.</span></li>
+<li><span style="font-family: verdana, sans-serif;">Test the page and debug. To test the console output, use the browser Developer Tools (Inspect) tool and click the <strong>Console</strong> tab. Your page should display a valid current temperature in Fahrenheit (if you set the units to imperial) on both the screen and in the console tab.</span></li>
+</ol>
+<p><span style="font-family: verdana, sans-serif;" class="callout">Hints: Note the code sample in the MDN web docs <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" target="_blank" rel="noopener">Using XMLHttpRequest</a> article.</span></p>
+<p><span style="font-family: verdana, sans-serif;" class="callout">Additional hints will be given in the virtual lab.</span></p>
+<p></p>
+<p><!--EndFragment--></p>
+</div>
+<!-- end #article --></div>
+
+</body>
+</html>
