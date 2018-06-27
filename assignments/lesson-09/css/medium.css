@@ -1,13 +1,13 @@
-@media only screen and (min-width: 40em)  {
+@media only screen and (min-width: 32.5em)  {
     
-    header img {width: 125px;}
-    .headertext {margin-left: 2rem;}
+    header img {width: 115px;}
+    .headertext {margin-left: 1.5rem;}
      .headertext h1 {font-size: 2rem;}
-     .subheading { font-size: 1rem;}
+     .subheading { font-size: .95rem;}
     .weathersummary {
         display: inline-block;
-        margin: 1rem 3.5rem;
-        padding: 1.5rem;
+        margin: 1rem 0 1rem 4rem;
+        padding: 1rem;
         vertical-align: middle;
         color: #fff;
         background-color: rgba(0, 87, 25, .75);
@@ -17,14 +17,17 @@
         text-shadow: 3px 3px 3px #333;
     }
     
-    .site-navigation li {display: inline-block;margin: 0 1rem;}
+    .site-navigation li {display: inline-block;margin: 0 .5rem;}
     .site-navigation li:first-child {display: none;}
-    .site-navigation li a {font-size: 1rem;}
+    .site-navigation li a {font-size: .9rem; padding: .5rem;}
     
     main .hero {border:1px solid #777;}
 
     .weatherdata {
-        font-size: 1rem;
+        top: 2rem;
+        left: 3rem;
+        padding: 1rem;
+        margin: .25rem;
     }
 
     .forecast {

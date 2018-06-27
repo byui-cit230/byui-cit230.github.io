@@ -14,10 +14,11 @@ function include() {
             allElements[i].removeAttribute('includefile');
             include(); // call the function again to start the process over
           }
-          xhttp.open('GET', 'includes/' + file, true);  // matching file names in includes folder
-          xhttp.send();
-          return; 
-        }
+        }  
+        xhttp.open('GET', 'includes/' + file, true);  // matching file names in includes folder
+        xhttp.send();
+        return; 
+       
       }
     } 
 }
