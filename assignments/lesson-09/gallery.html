@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Weather Site | Town of Franklin | Weather Conditions and Forecast</title>
+  <meta name="description" content="The Weather Site where the weather site catch phrase and other keywords">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans%7CRoboto" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet"> 
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/medium.css" rel="stylesheet">
+  <link href="css/large.css" rel="stylesheet"> 
+</head>
+<body>
+  <header>
+    <img src="images/weather.png" alt="The site logo" width="" height="">
+    <div class="headertext">
+      <h1>The Weather Site</h1>
+      <div class="subheading">The weather site catch phrase/motto</div>
+    </div>  
+    <div class="weathersummary">
+      <img id="wsimage" src="images/sunny.png" alt="Current Conditions Weather Icon">
+      <p id="currentconditions">Sunny</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="site-navigation">
+      <li><a href="#" onclick="toggleMenu()">&equiv; Menu</a></li>
+    	<li><a href="#">&#10048; Home</a></li>
+    	<li class="active"><a href="#">Franklin</a></li>
+    	<li><a href="#">Greenville</a></li>
+    	<li><a href="#">Springfield</a></li>
+    	<li><a href="#">Storm Center</a></li>
+      <li><a href="#">Gallery</a></li>
+    </ul>		
+  </nav>
+    
+  <main>
+    <h2>The Town of Franklin</h2>
+    <div class="mainheader">
+      <img src="images/franklin-hero.png" alt="Franklin Town Hero Image" class="hero">
+      <section class="weatherdata">
+        <h3>Weather Summary</h3>    
+        <p>
+        <span class="label">Currently: </span><span class="value">Sunny</span><br>
+        <span class="label">Temperature: </span><span class="value">76 &deg;F</span><br>
+        <span class="label">Humidity: </span><span class="value">69%</span><br>  
+        <span class="label">Precipitation: </span><span class="value">0 inches</span><br> 
+        <span class="label">Wind Speed: </span><span class="value">5 mph</span><br>            
+        </p>
+      </section>
+    </div>    
+    <section class="forecast">
+      <h3>High Temperature Forecast</h3>
+      <table>
+	    <thead>
+          <tr>
+            <th class="tright">Day</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+          </tr>
+		</thead>
+        <tbody>  
+          <tr>
+            <th class="tright">Forecast</th>
+            <td>89&deg;F</td>
+            <td>87&deg;F</td>
+            <td>78&deg;F</td>
+            <td>75&deg;F</td>
+            <td>72&deg;F</td>
+            <td>72&deg;F</td>
+            <td>79&deg;F</td>
+            <td>83&deg;F</td>
+            <td>85&deg;F</td>
+            <td>89&deg;F</td>
+          </tr>
+		</tbody>
+      </table>
+    </section>
+      
+    <article>
+      <h3>Franklin Founders Day Fresco	<pre>by Janica Juarez</pre></h3>
+      <p class="town-article">
+        <img src="images/articlebarbecue.jpg" alt="Franklin Town Article - Friends at Barbacue">
+        This fall after reflecting upon last year's event held in the overflowing Foundation park, I realized that I have been taking the festival for granted all these years and have not been properly engaging in perhaps the most popular community event of the year. In response, I contacted Ms. Sharon via email and expressed my desire to serve on the committee. Well, the phone rings immediately and she promptly asked me to be the chair of said event, quite the turnaround. My appreciation for the years of dedicated, generous service of volunteers and sponsors has escalated beyond what I thought I could feel for such a thing and ... <small><a href="#">continue to full article</a></small></p>
+		</article>		  
+  
+  </main>
+  <aside class="clearfix">
+    <div class="contactinfo">
+      <strong>The Weather Site</strong><br>
+      123 Main Street<br>
+      Anytown, CA 77733<br><br>
+      &phone; &nbsp; 999.999.9999<br>
+      &#9993; &nbsp; theweathersite@tws.com
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1455825.593397329!2d-112.45282650574364!3d42.213590668536476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87545e9663332cd3%3A0x6c702e7a4fbfdd16!2sFranklin%2C+ID+83237!5e0!3m2!1sen!2sus!4v1528678399946" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </aside>  
+  <footer>
+    <p class="footer-bar">&copy;2020 The Weather Site | Attributions | Student Name | <span id="currentdate">Wednesday, 20 May 2020</span></p>
+  </footer>
+
+  <script src="js/toggleMenu.js"></script>
+
+</body>
+</html>

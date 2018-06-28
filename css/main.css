@@ -18,15 +18,17 @@ h2 {
     font-size: 1.5rem;
 }
 
-header, main, footer {
+header, nav, main, footer {
     margin: 1.25rem auto;
     padding: .75rem;
     max-width: 64rem;
 }
 
 header nav {
-    background-color: navajowhite;
+    background-color: navy;
+    color: #fff;
 }
+
 
 
 header, footer, footer a {
@@ -36,16 +38,54 @@ header, footer, footer a {
 }
 
 header img {
-    width: 250px;
+    width: 100px;
     height: auto;
     float: right;
-    box-shadow: 3px 3px 3px #777;
 }
 
 footer {
     font-size: 1rem;
 }
 
+
+.site-navigation {
+    list-style: none;
+    text-align: center;
+    background-color: rgba(0, 87, 25, 1)
+}
+
+.site-navigation li {display:none;}
+.site-navigation li:first-child {display: block;}
+
+.site-navigation li a {
+    color: #fff;
+    padding: .75rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.site-navigation li.active a {
+    color: #fff;
+}
+
+.site-navigation li a:hover {
+    color:yellow;
+    background-color: rgba(0, 87, 25, .5);
+}
+
+.responsive li {
+    display: block;
+}
+
 .active {
     color: yellow;
+    background-color: #bbb;
+}
+
+@media only screen and (min-width: 50em)  {
+
+    .site-navigation li {display: inline-block;margin: 0 .5rem;}
+    .site-navigation li:first-child {display: none;}
+    .site-navigation li a {font-size: .9rem; padding: .5rem;}
 }
