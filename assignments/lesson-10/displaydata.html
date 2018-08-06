@@ -6,7 +6,7 @@
     <title>BYU - Idaho | CIT 230 | Chris B. Student | Example</title>
     <meta name="description" content="Consuming JSON data in CIT 230 - Web Frontend Development at Brigham Young University - Idaho.">  
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
-     <link href="styles/style.css" rel="stylesheet">
+     <link href="styles/heroes.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -15,7 +15,7 @@
     <main>
       <h2>Greenville Weather</h2>
       <em id="motto"></em>
-      <section style="font-family: 'Courier New'">
+      <section class="fixedw">
         <hr>
         &nbsp;Year Founded: <span id="yearFounded"></span><br>
         &nbsp;&nbsp;&nbsp;Population: <span id="population"></span><br>
@@ -30,11 +30,11 @@
           
     </main>
     <footer>
-      <small>CIT 230 | BYU-Idaho Online Learning | &copy;2017</small>
+      <small>CIT 230 | JSON Lesson | BYU-Idaho Online Learning | &copy;2017</small>
     </footer>
     
     <script>
-      var requestURL = "https://byui-cit230.github.io/towndata.json";
+      var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
       var request = new XMLHttpRequest();
       request.open('GET', requestURL);
       request.responseType =  'json';
