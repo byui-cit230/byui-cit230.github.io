@@ -1,0 +1,18 @@
+<div class="">
+  <img src="images/preston-hero.png" alt="" class="">
+  <section class="weathersummary">
+    <h3>Weather Summary</h3>
+    <div class="weatherdetails">
+      <p class="label">Currently:</p>
+      <p class="value">Sunny</p>
+      <p class="label">Temperature:</p>
+      <p class="value">76 &deg;F</p>
+      <p class="label">Humidity:</p>
+      <p class="value">69%</p>
+      <p class="label">Precipitation:</p>
+      <p class="value">0 inches</p>
+      <p class="label">Wind Speed:</p>
+      <p class="value">5 mph</p>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,11 @@
+<header>
+  <img src="" alt="">
+  <div class="">
+    <h1>The Weather Site</h1>
+    <div class="">The weather site catch phrase/motto</div>
+  </div>
+  <div class="">
+    <img id="" src="" alt="">
+    <p id=""></p>
+  </div>
+</header>
