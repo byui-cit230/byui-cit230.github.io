@@ -108,7 +108,7 @@ footer {
 main h2 {
     text-align: center;
     margin: 1.5rem 2%;
-    text-shadow: rgba(0, 87, 25, .75) 2px 2px 2px;
+    text-shadow: rgba(0, 87, 25, .75) 1px 1px 1px;
 }
 
 .mainheader {
@@ -142,11 +142,17 @@ main h2 {
     line-height: 1.2;
 }
 
-.weatherdata .label {
-    min-width: 200px;
+.weatherdetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
 }
 
-.weatherdata .value {
+.weatherdetails .label {
+    text-align: right;
+}
+
+.weatherdetails .value {
     color: yellow;
 }
 
@@ -197,7 +203,7 @@ aside {
 }
 
 .map iframe {
-width: 100%;
+    width: 100%;
 }
 
 footer {
@@ -222,4 +228,9 @@ footer {
 
 .clearfix {
     clear: both;
+}
+
+.smallicon {
+    width: 24px;
+    height: auto;
 }

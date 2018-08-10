@@ -4,22 +4,11 @@
     .headertext {margin-left: 1.5rem;}
      .headertext h1 {font-size: 2rem;}
      .subheading { font-size: .95rem;}
-    .weathersummary {
-        display: inline-block;
-        margin: 1rem 0 1rem 4rem;
-        padding: 1rem;
-        vertical-align: middle;
-        color: #fff;
-        background-color: rgba(0, 87, 25, .75);
-        border: 1pt solid rgba(0, 87, 25);
-        font-size: 1.1rem;
-        box-shadow: 0 0 30px #333;
-        text-shadow: 3px 3px 3px #333;
-    }
+
     
-    .site-navigation li {display: inline-block;margin: 0 .5rem;}
+    .site-navigation li {display: inline-block;margin: 0 .45rem;}
     .site-navigation li:first-child {display: none;}
-    .site-navigation li a {font-size: .9rem; padding: .5rem;}
+    .site-navigation li a {font-size: .9rem; padding: .75rem .35rem;}
     
     main .hero {border:1px solid #777;}
 
