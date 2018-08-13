@@ -192,12 +192,16 @@ aside {
     padding: 1rem;
 }
 
+.asideimage {
+    display: none;
+}
+
 .contactinfo {
     display: block;
     text-align: center;
     line-height: 1.2rem;
-    max-width: 200px;
-    align-items: left;
+    max-width: 250px;
+    text-align: left;
 }
 
 .map {
@@ -216,7 +220,7 @@ footer {
     color: #333;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    padding: .75rem;
+    padding: 1rem;
     color: #fff;
 }
 

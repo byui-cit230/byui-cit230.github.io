@@ -44,7 +44,6 @@
         text-align: center;
         margin-bottom: .5rem;
     }
-
     .forecast table {
         border-collapse: collapse;
         margin: 0 auto;
@@ -59,12 +58,20 @@
         border: 1px solid #fff;
         padding: .5rem;
     }
-
     .town-article img {
         width: 250px;
         height: auto;
         margin: 0 2rem;
         float: right;
+    }
+    .asideimage {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .asideimage picture img {
+        width: 200px;
+        height: auto;
     }
     .contactinfo {
         display: inline-block;
