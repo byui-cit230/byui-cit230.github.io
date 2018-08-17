@@ -11,6 +11,12 @@
     .subheading {
         font-size: .95rem;
     }
+
+    nav {
+        display: inline-block;
+        width: 200px;
+    }
+
     .site-navigation li {
         display: inline-block;
         margin: 0 .45rem;
@@ -22,6 +28,11 @@
         font-size: .9rem;
         padding: .75rem .35rem;
     }
+
+    main {
+        display: inline-block;
+    }
+
     main .hero {
         border: 1px solid #777;
     }
@@ -64,15 +75,8 @@
         margin: 0 2rem;
         float: right;
     }
-    .asideimage {
-        display: inline-block;
-        vertical-align: middle;
-    }
 
-    .asideimage picture img {
-        width: 200px;
-        height: auto;
-    }
+
     .contactinfo {
         display: inline-block;
         vertical-align: middle;

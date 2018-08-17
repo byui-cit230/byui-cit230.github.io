@@ -27,6 +27,12 @@
     .weatherdata {
         font-size: 1.2rem;
     }
+
+    .asideimage {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
     .asideimage picture img {
         width: 300px;
         height: auto;
