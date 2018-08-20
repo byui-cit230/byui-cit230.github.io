@@ -5,26 +5,28 @@
         <title>Example JSON Consumption</title>
     </head>
     <body>
-        <h1>Tri-City Weather Watch</h1>
-        <p>other page content including nave</p>
+        <h1>Town Data Example</h1>
         <section id="towndata">
-	        <p>we will use this area to start publishing other paragraphs of info</p>
+	        <p>section → paragraph placeholder</p>
         </section>
+
         <script>
-          var output = document.querySelector('section');
-          var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
-          var request = new XMLHttpRequest();
+          const output = document.querySelector('section');
+          const requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+          const request = new XMLHttpRequest();
           request.open('GET', requestURL);
           request.responseType = 'json';
           request.send();
             
           request.onload = function() {
-	        var citydata = request.response;
-            var cities = citydata['towns']; // this is where it might be confusing given the super heroes had a bit different format ...  the array is towns
+	        const citydata = request.response;
+            const cities = citydata['towns']; // this is where it might be confusing given the super heroes had a bit different format ...  the array is towns
 
-	        var myH3 = document.createElement('h3');
-	        myH3.textContent = cities[0].name;
-	        output.appendChild(myH3);
+            cities.forEach(city => {
+                let myH3 = document.createElement('h3');
+	            myH3.textContent = city.name;
+                output.appendChild(myH3);
+            });    
           };
         </script>
     </body>
