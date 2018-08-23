@@ -19,8 +19,8 @@
           request.send();
             
           request.onload = function() {
-	        const citydata = request.response;
-            const cities = citydata['towns']; // this is where it might be confusing given the super heroes had a bit different format ...  the array is towns
+	        let citydata = request.response;
+            let cities = citydata['towns']; // this is where it might be confusing given the super heroes had a bit different format ...  the array is towns
 
             cities.forEach(city => {
                 let myH3 = document.createElement('h3');
