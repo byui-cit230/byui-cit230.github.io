@@ -65,6 +65,17 @@ footer {
     font-size: 1rem;
 }
 
+section {
+    margin-bottom: 1.5rem;
+}
+
+section p img {
+    float:right; 
+    margin: .5rem;
+    width: 100px;
+    height: auto;
+}
+
 .site-navigation {
     list-style: none;
     text-align: center;
