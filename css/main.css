@@ -20,13 +20,19 @@ body {
 
 h1 {
     font-size: 2.1rem;
-    text-shadow: 3px 3px 5px #777;
-    margin: .1rem;
+    text-shadow: 2px 2px 5px #bbb;
+    margin: .15rem;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
 }
 
 h2 {
     font-size: 1.5rem;
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid #999;
     margin-bottom: .5rem;
 }
 
@@ -69,9 +75,13 @@ section {
     margin-bottom: 1.5rem;
 }
 
+section p {
+    margin-bottom: 7px;
+}
+
 section p img {
-    float:right; 
-    margin: .5rem;
+    float: right; 
+    margin: 10px;
     width: 100px;
     height: auto;
 }

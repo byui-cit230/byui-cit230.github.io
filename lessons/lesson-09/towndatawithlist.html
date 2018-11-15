@@ -23,12 +23,22 @@
             let output = document.querySelector('section');
 
             towns.forEach(town => {
-                let myH3 = document.createElement('h3');
-                let theP = document.createElement('p');
-                myH3.textContent = town.name;
-                theP.textContent = town.motto;
-                output.appendChild(myH3);
-                output.appendChild(theP);
+                if ( town.name == "Greenville" ) {
+                    let myH3 = document.createElement('h3');
+                    let theP = document.createElement('p');
+                    myH3.textContent = town.name;
+                    theP.textContent = town.motto;
+                    output.appendChild(myH3);
+                    output.appendChild(theP);
+
+                    let eventList = document.createElement('ul');
+                    town.events.forEach(event => {
+                        let listItem = document.createElement('li');
+                        listItem.textContent = event;
+                        eventList.appendChild(listItem);
+                    });
+                    output.appendChild(eventList);
+                }
             });    
           };
         </script>

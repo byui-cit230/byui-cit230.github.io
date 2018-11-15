@@ -3,59 +3,49 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Our superheroes</title>
+  <title>Our Super Heroes</title>
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-  <link rel="stylesheet" href="styles/heroes.css">
+  <link rel="stylesheet" href="css/heroes.css">
 </head>
 
 <body>
 
   <header>
+    <h1>Using Fetch Method</h1>
     <h1 id="page-title"></h1>
   </header>
   <main>
     <section id="towndata">
-
     </section>
   </main>
 
   <script>
-    var header = document.querySelector('header');
-    var section = document.querySelector('section');
-
-    // SOURCE https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
-    // XHR Method
-    // var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-    // var request = new XMLHttpRequest();
-    // request.open('GET', requestURL);
-    // request.responseType = 'json';
-    // request.send();
-
-    // request.onload = function () {
-    //   var superHeroes = request.response;
-    //   populateHeader(superHeroes);
-    //   showHeroes(superHeroes);
-    // }
-
+    // fetch JSON file from given location on github
     fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json')
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (superHeroes) {
+      .then(function (response) { return response.json(); })
+      .then(function (superHeroes) { 
         populateHeader(superHeroes);
         showHeroes(superHeroes);
       });
 
-    function populateHeader(jsonObj) {
-      document.getElementById('page-title').innerHTML = jsonObj['squadName'];
-
-      var myPara = document.createElement('p');
-      myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-      header.appendChild(myPara);
+    function populateHeader(jsonObject) {
+      // get the header element/selector in order to append it with content
+      let header = document.querySelector('header');
+      // Example: Direct append the header using element ID reference
+      document.getElementById('page-title').innerHTML = "Direct: " + jsonObject['squadName'];
+      // create elements as content containers - title and paragraph
+      let theTitle = document.createElement('h1');
+      theTitle.textContent = "Create Element: " + jsonObject['squadName'];
+      let theSubheading = document.createElement('p');
+      theSubheading.textContent = 'Hometown: ' + jsonObject['homeTown'] + ' // Formed: ' + jsonObject['formed'];
+      
+      header.appendChild(theTitle);
+      header.appendChild(theSubheading);
     }
 
-    function showHeroes(jsonObj) {
-      var heroes = jsonObj['members'];
+    function showHeroes(jsonObject) {
+      let section = document.querySelector('section');
+      let heroes = jsonObject['members'];
 
       for (var i = 0; i < heroes.length; i++) {
         var myArticle = document.createElement('article');
