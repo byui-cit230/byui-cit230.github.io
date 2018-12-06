@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BYU - Idaho | CIT 230 | Chris B. Student | Example</title>
+    <meta name="description" content="Consuming JSON data in CIT 230 - Web Frontend Development at Brigham Young University - Idaho.">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+     <link href="styles/heroes.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Town Data</h1> 
+    </header>
+    <main>
+      <h2>Greenville Weather</h2>
+      <em id="motto"></em>
+      <section class="fixedw">
+        <hr>
+        &nbsp;Year Founded: <span id="yearFounded"></span><br>
+        &nbsp;&nbsp;&nbsp;Population: <span id="population"></span><br>
+        Avg. Rainfall: <span id="rainfall"></span> in<sup>2</sup>
+        <hr>
+      </section>
+      <section>
+        <h4>Events</h4>
+        <ul id="events">
+        </ul>
+      </section> 
+          
+    </main>
+    <footer>
+      <small>CIT 230 | JSON Lesson | BYU-Idaho Online Learning | &copy;2017</small>
+    </footer>
+    
+    <script>
+      var requestURL = "https://byui-cit230.github.io/weather/data/towndata.json";
+      var request = new XMLHttpRequest();
+      request.open('GET', requestURL);
+      request.responseType =  'json';
+      request.send();
+      request.onload = function() {
+        var towndata = request.response;
+ 
+        var towns = towndata['towns']; // array of towns in data file
+        // Go through each town in the towns array of data
+        for (var i = 0; i < towns.length; i++) {
+          // only display items that match the current page
+          if (towns[i].name == 'Greenville') {
+            document.getElementById('motto').innerHTML = "'" + towns[i].motto + "'";
+            document.getElementById('yearFounded').innerHTML = towns[i].yearFounded;
+            document.getElementById('population').innerHTML = towns[i].currentPopulation;
+            document.getElementById('rainfall').innerHTML = towns[i].averageRainfall;
+            
+            // Add town events to the list of events element
+            var townEvents = towns[i].events; // array of events for current town       
+            for (var j = 0; j < townEvents.length; j++) {
+              var listItem = document.createElement('li');
+              listItem.textContent = townEvents[j];
+              document.getElementById('events').appendChild(listItem);        
+            }
+          }
+        }   
+      }
+    </script>
+    
+    </body>
+</html>

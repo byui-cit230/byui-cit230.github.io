@@ -1,0 +1,33 @@
+<!docytpe html>
+<html>
+
+<head>
+  <title>Weather Data Franklin MN</title>
+  <style>
+    .datapoint {
+      margin: .25rem auto;
+      border: 1px solid #eee;
+      padding: .25rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Weather Data</h1>
+  <div class="datapoint">Description:
+    <span id="desc"></span>
+  </div>
+  <div class="datapoint">Current Temp:
+    <span id="temp"></span>&deg; F</div>
+  <div class="datapoint">Current Wind Speed:
+    <span id="wind"></span> mph</div>
+  <div class="datapoint">Icon:
+    <img id="icon" src="" alt="Current Weather Icon">
+  </div>
+  <div class="datapoint">Forecast:
+    <span id="forecast"></span>
+  </div>
+  <script src="scripts/wu-weather-solved.js"></script>
+</body>
+
+</html>
