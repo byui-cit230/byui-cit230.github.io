@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CIT 230 - Assessment Helper - Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <main class="helper">
+    <h1>CIT 230 Helper Report</h1>
+    <div class="helper-report">
+      <p id="address"></p>
+      <p id="testoutput1"></p>
+      <p id="testoutput1"></p>
+    </div>
+  </main>
+
+  <script>
+    let url = document.URL.split('?')[1];
+    document.getElementById('address').innerHTML = url;
+  </script>
+
+</body>
+
+</html>

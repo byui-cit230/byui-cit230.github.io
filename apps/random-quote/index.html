@@ -1,0 +1,55 @@
+<!-- https://freshman.tech/random-quote-machine/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Random Quote App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link rel="stylesheet" href="random-quote.css">
+  </head>
+  <body>
+    <main class="app">
+
+      <section class="quotes">
+        <div class="quote-text"></div>
+      </section>
+      <section class="controls">
+        <a class="tweet button">Tweet</a>
+        <button type="button" class="new-quote button">New Quote</button>
+      </section>
+  
+    </main>
+
+      <script>
+      const newQuoteButton = document.querySelector('.new-quote');
+      newQuoteButton.addEventListener('click', getQuote);
+
+      // third party API - test
+      const endpoint = 'https://api.whatdoestrumpthink.com/api/v1/quotes/random';
+
+      function getQuote() {
+        fetch(endpoint)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            let msg = data.message;
+            console.log(msg);
+            displayQuote(msg);
+          })
+          .catch(function () {
+            console.log("An error occurred.");
+          });
+        
+      }
+
+      function displayQuote(quote) {
+        const quoteText = document.querySelector('.quote-text');
+        quoteText.innerHTML = quote;
+      }
+
+      </script>
+
+  </body>
+</html>
