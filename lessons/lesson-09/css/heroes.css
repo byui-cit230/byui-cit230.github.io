@@ -59,16 +59,16 @@ footer {
 
 /* section styles */
 
-#towndata {
+#list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 section article {
   background-color: rgba(238, 238, 238, 1);
   flex: auto;
   border: 1px rgba(77,77,150,.5) solid;
-  padding: .45rem;
+  padding: .5rem;
 }
 
 /* Class Selectors */
@@ -77,8 +77,8 @@ section article {
   font-family: 'Courier New', Courier, monospace;
 }
 
-@media (max-width: 37em) {
-  #towndata {
-    display:block;
+@media (min-width: 32.5em) {
+  #list {
+    flex-direction: row;
   }
 }

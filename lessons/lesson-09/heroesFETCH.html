@@ -15,15 +15,17 @@
     <h1 id="page-title"></h1>
   </header>
   <main>
-    <section id="towndata">
+    <section id="list">
     </section>
   </main>
 
   <script>
     // fetch JSON file from given location on github
     fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json')
-      .then(function (response) { return response.json(); })
-      .then(function (superHeroes) { 
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (superHeroes) {
         populateHeader(superHeroes);
         showHeroes(superHeroes);
       });
@@ -35,10 +37,10 @@
       document.getElementById('page-title').innerHTML = "Direct: " + jsonObject['squadName'];
       // create elements as content containers - title and paragraph
       let theTitle = document.createElement('h1');
-      theTitle.textContent = "Create Element: " + jsonObject['squadName'];
+        theTitle.textContent = "Create Element: " + jsonObject['squadName'];
       let theSubheading = document.createElement('p');
-      theSubheading.textContent = 'Hometown: ' + jsonObject['homeTown'] + ' // Formed: ' + jsonObject['formed'];
-      
+        theSubheading.textContent = 'Hometown: ' + jsonObject['homeTown'] + ' // Formed: ' + jsonObject['formed'];
+
       header.appendChild(theTitle);
       header.appendChild(theSubheading);
     }
@@ -77,6 +79,7 @@
       }
     }
   </script>
+
 </body>
 
 </html>
