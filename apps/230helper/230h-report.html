@@ -24,6 +24,10 @@
   <script>
     let url = document.URL.split('?')[1];
     document.getElementById('address').innerHTML = url;
+    fetch('https://validator.w3.org/nu/')
+      .then(function (response) {
+        console.log(response.json)
+      });
   </script>
 
 </body>

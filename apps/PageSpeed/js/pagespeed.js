@@ -46,7 +46,7 @@ function showInitialContent(id) {
   title.textContent = 'PageSpeed Insights';
   document.body.appendChild(title);
   const page = document.createElement('p');
-  page.textContent = `<strong>Page tested</strong>: ${id}`;
+  page.textContent = `Page tested: ${id}`;
   document.body.appendChild(page);
 }
 

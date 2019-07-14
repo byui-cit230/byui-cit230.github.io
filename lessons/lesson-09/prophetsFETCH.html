@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Latter-day Prophets</title>
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="css/heroes.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Latter-day Prophets</h1>
+  </header>
+  <main>
+    <section id="list">
+    </section>
+  </main>
+
+  <script>
+    // fetch JSON file from given location on github
+    fetch('https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.json')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+          let tempdata = JSON.parse(data);
+          console.table(tempdata);
+          let section = document.querySelector('section');
+          let prophets = jsonObject['prophets'];
+
+          for (let i = 0; i < prophets.length; i++) {
+            var myArticle = document.createElement('article');
+            var myH2 = document.createElement('h2');
+            var myPara1 = document.createElement('p');
+
+            myH2.textContent = prophets[i].name + " " + prophets[i].lastname;
+            myPara1.textContent = 'Birthdate: ' + prophets[i].birthdate;
+
+            myArticle.appendChild(myH2);
+            myArticle.appendChild(myPara1);
+
+            section.appendChild(myArticle);
+          }
+      });
+  </script>
+
+</body>
+
+</html>
