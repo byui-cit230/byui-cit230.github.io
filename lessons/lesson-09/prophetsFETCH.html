@@ -21,14 +21,14 @@
   <script>
     // fetch JSON file from given location on github
     fetch('https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.json')
-      .then(function (response) {
+      .then(function(response) {
         return response.json();
       })
-      .then(function (data) {
-          let tempdata = JSON.parse(data);
-          console.table(tempdata);
+      .then(function(theData) {
+          console.table(theData);
+
           let section = document.querySelector('section');
-          let prophets = jsonObject['prophets'];
+          let prophets = theData['prophets'];
 
           for (let i = 0; i < prophets.length; i++) {
             var myArticle = document.createElement('article');

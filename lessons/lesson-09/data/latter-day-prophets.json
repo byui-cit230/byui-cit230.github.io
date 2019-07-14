@@ -2,7 +2,7 @@
   "prophets": [{
       "name": "Joseph",
       "lastname": "Smith",
-      "birthday": "23 December 1805",
+      "birthdate": "23 December 1805",
       "death": "27 June 1844",
       "length": 14,
       "order": 1,
@@ -13,7 +13,7 @@
     {
       "name": "Brigham",
       "lastname": "Young",
-      "birthday": "01 June 1801",
+      "birthdate": "01 June 1801",
       "death": "29 August 1877",
       "length": 30,
       "order": 2,
@@ -24,7 +24,7 @@
     {
       "name": "John",
       "lastname": "Taylor",
-      "birthday": "01 November 1808",
+      "birthdate": "01 November 1808",
       "death": "25 July 1887",
       "length": 6,
       "order": 3,
@@ -35,7 +35,7 @@
     {
       "name": "Wilford",
       "lastname": "Woodruff",
-      "birthday": "01 March 1807",
+      "birthdate": "01 March 1807",
       "death": "02 September 1898",
       "length": 9,
       "order": 4,
@@ -46,7 +46,7 @@
     {
       "name": "Lorenzo",
       "lastname": "Snow",
-      "birthday": "03 April 1814",
+      "birthdate": "03 April 1814",
       "death": "19 October 1901",
       "length": 3,
       "order": 5,
@@ -57,7 +57,7 @@
     {
       "name": "Joseph F.",
       "lastname": "Smith",
-      "birthday": "12 November 1838",
+      "birthdate": "12 November 1838",
       "death": "19 November 1918",
       "length": 17,
       "order": 6,
@@ -68,7 +68,7 @@
     {
       "name": "Heber J.",
       "lastname": "Grant",
-      "birthday": "22 November 1856",
+      "birthdate": "22 November 1856",
       "death": "14 May 1945",
       "length": 23,
       "order": 7,
@@ -79,7 +79,7 @@
     {
       "name": "George A.",
       "lastname": "Smith",
-      "birthday": "4 April 1870",
+      "birthdate": "4 April 1870",
       "death": "4 April 1951",
       "length": 6,
       "order": 8,
@@ -90,7 +90,7 @@
     {
       "name": "David O.",
       "lastname": "McKay",
-      "birthday": "8 September 1873",
+      "birthdate": "8 September 1873",
       "death": "18 January 1970",
       "length": 19,
       "order": 9,
@@ -101,7 +101,7 @@
     {
       "name": "Joseph Fielding",
       "lastname": "Smith",
-      "birthday": "19 July 1876",
+      "birthdate": "19 July 1876",
       "death": "2 July 1972",
       "length": 1,
       "order": 10,
@@ -112,7 +112,7 @@
     {
       "name": "Harold B.",
       "lastname": "Lee",
-      "birthday": "28 March 1899",
+      "birthdate": "28 March 1899",
       "death": "26 December 1973",
       "length": 1,
       "order": 11,
@@ -123,7 +123,7 @@
     {
       "name": "Spencer W.",
       "lastname": "Kimball",
-      "birthday": "28 March 1895",
+      "birthdate": "28 March 1895",
       "death": "5 November 1985",
       "length": 12,
       "order": 12,
@@ -134,7 +134,7 @@
     {
       "name": "Ezra Taft",
       "lastname": "Benson",
-      "birthday": "4 August 1899",
+      "birthdate": "4 August 1899",
       "death": "30 May 1994",
       "length": 9,
       "order": 13,
@@ -145,7 +145,7 @@
     {
       "name": "Howard W.",
       "lastname": "Hunter",
-      "birthday": "14 November 1907",
+      "birthdate": "14 November 1907",
       "death": "3 March 1995",
       "length": 1,
       "order": 14,
@@ -156,7 +156,7 @@
     {
       "name": "Gordon B.",
       "lastname": "Hinckley",
-      "birthday": "23 June 1910",
+      "birthdate": "23 June 1910",
       "death": "27 January 2008",
       "length": 13,
       "order": 15,
@@ -167,7 +167,7 @@
     {
       "name": "Thomas S.",
       "lastname": "Monson",
-      "birthday": "21 August 1927",
+      "birthdate": "21 August 1927",
       "death": "2 January 2018",
       "length": 10,
       "order": 16,
@@ -178,7 +178,7 @@
     {
       "name": "Russell M.",
       "lastname": "Nelson",
-      "birthday": "9 September 1924",
+      "birthdate": "9 September 1924",
       "death": null,
       "length": 2,
       "order": 17,
