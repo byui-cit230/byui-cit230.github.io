@@ -3,9 +3,17 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Latter-day Prophets</title>
+  <meta name="description" content="This is a JSON consumption activity.">
+  <link rel="icon" type="image/png" href="../../favicon.ico">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-  <link rel="stylesheet" href="css/heroes.css">
+  <link rel="stylesheet" href="css/prophets.css">
 </head>
 
 <body>
@@ -21,28 +29,31 @@
   <script>
     // fetch JSON file from given location on github
     fetch('https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.json')
-      .then(function(response) {
+      .then(function (response) {
         return response.json();
       })
-      .then(function(theData) {
-          console.table(theData);
+      .then(function (jsonObject) {
+        console.table(jsonObject);
 
-          let section = document.querySelector('section');
-          let prophets = theData['prophets'];
+        const prophets = jsonObject['prophets'];
 
-          for (let i = 0; i < prophets.length; i++) {
-            var myArticle = document.createElement('article');
-            var myH2 = document.createElement('h2');
-            var myPara1 = document.createElement('p');
+        for (let i = 0; i < prophets.length; i++) {
+          let myArticle = document.createElement('article');
+          let myH2 = document.createElement('h2');
+          let myPara1 = document.createElement('p');
+          let myImg = document.createElement('img');
 
-            myH2.textContent = prophets[i].name + " " + prophets[i].lastname;
-            myPara1.textContent = 'Birthdate: ' + prophets[i].birthdate;
+          myH2.textContent = prophets[i].name + " " + prophets[i].lastname;
+          myPara1.textContent = 'Birthdate: ' + prophets[i].birthdate;
+          myImg.setAttribute('src', prophets[i].imageurl);
+          myImg.setAttribute('alt', prophets[i].name);
 
-            myArticle.appendChild(myH2);
-            myArticle.appendChild(myPara1);
+          myArticle.appendChild(myH2);
+          myArticle.appendChild(myPara1);
+          myArticle.appendChild(myImg);
 
-            section.appendChild(myArticle);
-          }
+          document.querySelector('section').appendChild(myArticle);
+        }
       });
   </script>
 
