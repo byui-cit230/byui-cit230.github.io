@@ -1,15 +1,24 @@
 function test() {
-  let url = document.getElementById('url').value;
-  const call = 'https://validator.w3.org/nu/';
+  const aside = document.querySelector('aside');
 
-  let promise = fetch(call);
-  if (promise.ok) {
-    let json = promise.json();
+  const desc = document.querySelector('meta[name="description"]');
 
-  } else {
-    alert("HTTP Response Error: " + promise.status);
-  }
-  
-  console.log(json);
+  //region fetch url
+
+    let url = document.getElementById('url').value;
+    const call = 'https://validator.w3.org/nu/';
+
+    let promise = fetch(call);
+    if (promise.ok) {
+      let json = promise.json();
+      console.log(json);
+
+    } else {
+      alert("HTTP Response Error: " + promise.status);
+    }
+
+  //endregion
+
+  aside.insertAdjacentHTML('beforeEnd', debug);
 
 }
