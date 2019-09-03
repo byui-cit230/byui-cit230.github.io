@@ -171,6 +171,7 @@ section p img {
 }
 
 .mainform {
+    margin: 15px 0;
     background-color:lightyellow;
     border: 1px solid #777;
     padding: 1rem;
