@@ -1,5 +1,6 @@
 {
-  "prophets": [{
+  "prophets": [
+    {
       "name": "Joseph",
       "lastname": "Smith",
       "birthdate": "23 December 1805",
@@ -8,7 +9,7 @@
       "order": 1,
       "birthplace": "Vermont",
       "numofchildren": 11,
-      "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/church-history/joseph-smith-art-lds-37715-gallery.jpg"
+      "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/american-prophet-joseph-smith-jr-1178035-gallery.jpg"
     },
     {
       "name": "Brigham",
@@ -184,7 +185,7 @@
       "order": 17,
       "birthplace": "Utah",
       "numofchildren": 10,
-      "imageurl": "https://photos.thechurchnews.com/file/52b8de3202/dnews/galleryImageLarge/elder-russell-m-nelson.jpg"
+      "imageurl": "https://media.ldscdn.org/images/media-library/church-leadership/first-presidency-and-quorum-of-the-twelve-apostles/russell-nelson-official-portrait-2018-2044670-gallery.jpg"
     }
   ]
 }
