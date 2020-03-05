@@ -38,7 +38,7 @@ These objectives are based on web standards and best practices to help you be su
 | JavaScript                    | A core web technology at the application level given CIT 160 or equivalent background. |                 |
 | Collaboration/Version Control | git at the command and the use of GitHub                                               |                 |
 | Task Runner / Deployment Work | Grunt/Gulp                                                                             |                 |
-| jQuery                        |                                                                                        |                 |
+|                               |                                                                                        |                 |
 | JSON                          | Basic                                                                                  |                 |
 | server-side programming       | php, asp.net, etc. introduction                                                        | curriculum flow |  |
 
