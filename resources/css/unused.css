@@ -100,12 +100,12 @@ footer {
   }
 
   .main-menu a {
-    /* display: block; */
-    /* color: #fff; */
-    /* padding: 0.5rem; */
-    /* text-decoration: none; */
+    display: block;
+    color: #fff;
+    padding: 0.5rem;
+    text-decoration: none;
     font-size: 1.3rem;
-    /* text-align: center; */
+    text-align: center;
   }
 
   main > img {
