@@ -1,19 +1,6 @@
 {
   "towns": [
     {
-      "name": "Preston",
-      "photo": "preston.jpg",
-      "motto": "Home of Napoleon Dynamite.",
-      "yearFounded": 1866,
-      "currentPopulation": 5204,
-      "averageRainfall": 16.65,
-      "events": [
-        "March 29: Work Creek Revival",
-        "July 8-12: Napoleon Dynamite Festival",
-        "November 2-4: Freedom Days"
-      ]
-    },
-    {
       "name": "Franklin",
       "photo": "franklin.jpg",
       "motto": "Where you will grow!",
@@ -64,6 +51,19 @@
       "events": [
         "July 4: A Blaze of Glory",
         "October 20: Fall through Fall"
+      ]
+    },
+    {
+      "name": "Preston",
+      "photo": "preston.jpg",
+      "motto": "Home of Napoleon Dynamite.",
+      "yearFounded": 1866,
+      "currentPopulation": 5204,
+      "averageRainfall": 16.65,
+      "events": [
+        "March 29: Work Creek Revival",
+        "July 8-12: Napoleon Dynamite Festival",
+        "November 2-4: Freedom Days"
       ]
     },
     {
